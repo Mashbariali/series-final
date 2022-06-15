@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "25515253-26f7-4505-a5fb-de48ae3507f8",
+		"name": "series-TV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21319213"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "series",
+			"item": [
+				{
+					"name": "Add Series",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5MzM4MjExLCJpYXQiOjE2NTUwMTgyMTEsImp0aSI6IjNiNWQyZDJiOWExNTQ0ZmFhZGI0OTAxMWFlMWVjYjJkIiwidXNlcl9pZCI6MX0.ods5EZ4OlznT15Bu1At-3p8qdmCE5yL7eMXKGdfbOns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Vikings\",\r\n    \"description\":\"Drama Series\",\r\n    \"rating\":\"10\",\r\n    \"photo\":\"https://sotor.com/%D9%82%D8%B5%D8%A9-%D9%85%D8%B3%D9%84%D8%B3%D9%84-Vikings/\",\r\n    \"user\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/add/series",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"add",
+								"series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Series",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/list/series",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"list",
+								"series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Series",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/update/series/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"update",
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Series",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5MzUyODA5LCJpYXQiOjE2NTUwMzI4MDksImp0aSI6ImYwMTVjYzMyNzY4YjQ3YWU5NTk0MDM2ZTk3MWIxN2RiIiwidXNlcl9pZCI6MX0.yjXdEwZnzztifx--rt8vOOZe4iSdqE5dHBv9Ot4y05U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/delete/series/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"delete",
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List The Top 5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/top",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"top"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search for Series",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/search/GOT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"search",
+								"GOT"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "Add Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5MzM4MjExLCJpYXQiOjE2NTUwMTgyMTEsImp0aSI6IjNiNWQyZDJiOWExNTQ0ZmFhZGI0OTAxMWFlMWVjYjJkIiwidXNlcl9pZCI6MX0.ods5EZ4OlznT15Bu1At-3p8qdmCE5yL7eMXKGdfbOns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"great series\",\r\n    \"series\":\"1\",\r\n    \"user\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/add/review",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"add",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/list/review",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"list",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/delete/review/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"delete",
+								"review",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "suggestions",
+			"item": [
+				{
+					"name": "Add suggestion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5MzM4MjExLCJpYXQiOjE2NTUwMTgyMTEsImp0aSI6IjNiNWQyZDJiOWExNTQ0ZmFhZGI0OTAxMWFlMWVjYjJkIiwidXNlcl9pZCI6MX0.ods5EZ4OlznT15Bu1At-3p8qdmCE5yL7eMXKGdfbOns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"GOT\",\r\n    \"description\":\"great series\",\r\n    \"user\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/add/suggestions",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"add",
+								"suggestions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Suggestions",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Suggestions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/series/delete/suggestions/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"series",
+								"delete",
+								"suggestions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
